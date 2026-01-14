@@ -40,13 +40,26 @@ set('n', '<leader><tab>t', '<cmd>tablast<cr>', { desc = 'Last Tab' })
 set('n', '<leader><tab>l', '<cmd>tabnext<cr>', { desc = 'Next Tab' })
 set('n', '<leader><tab>h', '<cmd>tabprevious<cr>', { desc = 'Previous Tab' })
 
--- ── Navigation & Lists ───────────────────────────────────────────
-set('n', '[q', vim.cmd.cprev, { desc = 'Previous Quickfix' })
-set('n', ']q', vim.cmd.cnext, { desc = 'Next Quickfix' })
-
 -- ── Nvim-Tree ───────────────────────────────────────────────────
 set('n', '<leader>e', '<cmd>NvimTreeToggle<cr>', { desc = 'Explorer Toggle (Root)' })
 set('n', '<leader>E', '<cmd>NvimTreeFindFile<cr>', { desc = 'Explorer Focus Current File' })
+
+-- ── Flash (Enhanced Navigation) ──────────────────────────────────
+-- Basic Jump
+set({ 'n', 'x', 'o' }, 's', function() require("flash").jump() end, { desc = 'Flash' })
+
+-- Treesitter Selection & Search
+set({ 'n', 'x', 'o' }, 'S', function() require("flash").treesitter() end, { desc = 'Flash Treesitter' })
+set({ 'x', 'o' }, 'R', function() require("flash").treesitter_search() end, { desc = 'Treesitter Search' })
+
+-- Remote Operations
+set('o', 'r', function() require("flash").remote() end, { desc = 'Remote Flash' })
+
+-- ── Spider Motions (Subword Navigation) ──────────────────────────
+set({ 'n', 'x', 'o' }, 'w',  "<cmd>lua require('spider').motion('w')<cr>",  { desc = 'Next word' })
+set({ 'n', 'x', 'o' }, 'e',  "<cmd>lua require('spider').motion('e')<cr>",  { desc = 'Next end of word' })
+set({ 'n', 'x', 'o' }, 'b',  "<cmd>lua require('spider').motion('b')<cr>",  { desc = 'Previous word' })
+set({ 'n', 'x', 'o' }, 'ge', "<cmd>lua require('spider').motion('ge')<cr>", { desc = 'Previous end of word' })
 
 -- ── Diagnostics ──────────────────────────────────────────────────
 local diagnostic_goto = function(next, severity)
