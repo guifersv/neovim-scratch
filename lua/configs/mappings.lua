@@ -2,8 +2,8 @@ local set = vim.keymap.set
 
 -- ── File & Session Management ────────────────────────────────────
 set({ 'i', 'x', 'n', 's' }, '<C-s>', '<cmd>w<cr><esc>', { desc = 'Save File' })
-set('n', '<leader>qq', '<cmd>qa<cr>', { desc = 'Close All' })
-set('n', '<leader>qQ', '<cmd>qa!<cr>', { desc = 'Force Close All' })
+set('n', '<leader>q', '<cmd>qa<cr>', { desc = 'Close All' })
+set('n', '<leader>Q', '<cmd>qa!<cr>', { desc = 'Force Close All' })
 set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
 -- ── General Editor Behavior ──────────────────────────────────────
@@ -43,6 +43,10 @@ set('n', '<leader><tab>h', '<cmd>tabprevious<cr>', { desc = 'Previous Tab' })
 -- ── Navigation & Lists ───────────────────────────────────────────
 set('n', '[q', vim.cmd.cprev, { desc = 'Previous Quickfix' })
 set('n', ']q', vim.cmd.cnext, { desc = 'Next Quickfix' })
+
+-- ── Nvim-Tree ───────────────────────────────────────────────────
+set('n', '<leader>e', '<cmd>NvimTreeToggle<cr>', { desc = 'Explorer Toggle (Root)' })
+set('n', '<leader>E', '<cmd>NvimTreeFindFile<cr>', { desc = 'Explorer Focus Current File' })
 
 -- ── Diagnostics ──────────────────────────────────────────────────
 local diagnostic_goto = function(next, severity)
