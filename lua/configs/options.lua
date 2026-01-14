@@ -8,9 +8,9 @@ opt.completeopt = "menu,menuone,noselect"
 opt.conceallevel = 2
 opt.confirm = true
 opt.cursorline = true
-opt.cursorlineopt = "number"
+opt.cursorlineopt = "both"
 opt.expandtab = true
-opt.fillchars = { eob = " " }
+-- opt.fillchars = { eob = " " }
 opt.foldlevel = 99
 opt.foldmethod = "indent"
 opt.foldtext = ""
