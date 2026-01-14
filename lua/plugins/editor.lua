@@ -13,6 +13,7 @@ return {
 				{ "<leader>g", group = "Git", mode = "n" },
 				{ "<leader>c", group = "Trouble", mode = "n" },
 				{ "<leader>b", group = "Buffer", mode = "n" },
+				{ "<leader>f", group = "Telescope", mode = "n" },
 			},
 		},
 	},

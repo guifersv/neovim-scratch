@@ -37,7 +37,7 @@ return {
 				root_folder_label = false,
 				highlight_git = true,
 				indent_markers = {
-					enable = true,
+					enable = false,
 				},
 				icons = {
 					glyphs = {
