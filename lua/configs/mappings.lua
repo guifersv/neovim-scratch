@@ -102,6 +102,14 @@ set("n", "<leader>ar", "<cmd>Crun<CR>", { desc = "Cargo run" })
 set("n", "<leader>ab", "<cmd>Cbuild<CR>", { desc = "Cargo build" })
 set("n", "<leader>at", "<cmd>Ctest<CR>", { desc = "Cargo test" })
 
+set("n", "<leader>aa", function()
+	vim.cmd.RustLsp("codeAction") -- supports rust-analyzer's grouping
+	-- or vim.lsp.buf.codeAction() if you don't want grouping.
+end, { desc = "Cargo code actions" })
+set("n", "<leader>ak", function()
+	vim.cmd.RustLsp({ "hover", "actions" })
+end, { desc = "Cargo hover" })
+
 -- .NET
 set("n", "<leader>mr", "<cmd>Dotnet run<CR>", { desc = "Dotnet run" })
 set("n", "<leader>mw", "<cmd>Dotnet watch<CR>", { desc = "Dotnet watch" })
