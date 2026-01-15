@@ -1,36 +1,37 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
-	branch = "master",
-	event = { "BufReadPost", "BufNewFile" },
-	cmd = { "TSInstall", "TSBufEnable", "TSBufDisable", "TSModuleInfo" },
+	lazy = false,
 	build = ":TSUpdate",
-	config = function(_, opts)
-		require("nvim-treesitter.configs").setup({
-			ensure_installed = {
-				"bash",
-				"c",
-				"diff",
-				"json",
-				"lua",
-				"luadoc",
-				"luap",
-				"markdown",
-				"markdown_inline",
-				"query",
-				"regex",
-				"toml",
-				"vim",
-				"vimdoc",
-				"xml",
-				"yaml",
-				"rust",
-			},
-			highlight = {
-				enable = true,
-				use_languagetree = true,
-			},
-			indent = { enable = true },
-			folds = { enable = true },
+	config = function()
+		local parsers = {
+			"bash",
+			"c",
+			"diff",
+			"json",
+			"lua",
+			"luadoc",
+			"luap",
+			"markdown",
+			"markdown_inline",
+			"query",
+			"regex",
+			"toml",
+			"vim",
+			"vimdoc",
+			"xml",
+			"yaml",
+			"rust",
+		}
+
+		vim.api.nvim_create_autocmd("FileType", {
+			pattern = parsers,
+			callback = function()
+				vim.treesitter.start()
+				vim.wo[0][0].foldexpr = "v:lua.vim.treesitter.foldexpr()"
+				vim.wo[0][0].foldmethod = "expr"
+			end,
 		})
+
+		require("nvim-treesitter").install(parsers)
 	end,
 }

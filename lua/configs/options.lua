@@ -12,8 +12,6 @@ opt.cursorline = true
 opt.cursorlineopt = "both"
 opt.expandtab = true
 -- opt.fillchars = { eob = " " }
-o.foldmethod = "expr"
-o.foldexpr = "nvim_treesitter#foldexpr()"
 o.foldlevel = 99
 o.foldenable = true
 opt.formatoptions = "jcroqlnt"
