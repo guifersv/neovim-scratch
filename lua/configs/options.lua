@@ -1,5 +1,6 @@
 local opt = vim.opt
 local g = vim.g
+local o = vim.o
 
 -- General Settings
 opt.autowrite = true
@@ -11,9 +12,10 @@ opt.cursorline = true
 opt.cursorlineopt = "both"
 opt.expandtab = true
 -- opt.fillchars = { eob = " " }
-opt.foldlevel = 99
-opt.foldmethod = "indent"
-opt.foldtext = ""
+o.foldmethod = "expr"
+o.foldexpr = "nvim_treesitter#foldexpr()"
+o.foldlevel = 99
+o.foldenable = true
 opt.formatoptions = "jcroqlnt"
 opt.grepformat = "%f:%l:%c:%m"
 opt.grepprg = "rg --vimgrep"
