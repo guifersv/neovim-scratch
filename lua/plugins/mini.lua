@@ -5,6 +5,11 @@ return {
 		require("mini.move").setup()
 		require("mini.pairs").setup()
 		require("mini.bufremove").setup()
+		require("mini.splitjoin").setup({
+			mappings = {
+				toggle = "gz",
+			},
+		})
 		require("mini.cursorword").setup()
 		require("mini.surround").setup({
 			mappings = {

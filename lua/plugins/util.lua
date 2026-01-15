@@ -22,7 +22,7 @@ return {
 		main = "ibl",
 		opts = {
 			indent = { char = "│", tab_char = "│", highlight = "OasisPrimary" },
-			scope = { char = "│", show_start = false, show_end = false, highlight = "OasisAccent" },
+			scope = { show_start = false, show_end = false, highlight = "OasisAccent" },
 			exclude = {
 				buftypes = { "terminal", "nofile" },
 				filetypes = { "help", "alpha", "dashboard", "Trouble", "lazy", "NvimTree" },
@@ -31,5 +31,10 @@ return {
 				remove_blankline_trail = true,
 			},
 		},
+	},
+	{
+		"akinsho/toggleterm.nvim",
+		version = "*",
+		config = true,
 	},
 }

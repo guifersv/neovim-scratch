@@ -69,6 +69,14 @@ set({ "n", "x", "o" }, "e", "<cmd>lua require('spider').motion('e')<cr>", { desc
 set({ "n", "x", "o" }, "b", "<cmd>lua require('spider').motion('b')<cr>", { desc = "Previous word" })
 set({ "n", "x", "o" }, "ge", "<cmd>lua require('spider').motion('ge')<cr>", { desc = "Previous end of word" })
 
+-- ── ToggleTerm ──────────────────────────
+set("t", "<A-f>", [[<C-\><C-n><cmd>ToggleTerm direction=float<CR>]], { silent = true })
+set("t", "<A-h>", [[<C-\><C-n><cmd>ToggleTerm direction=horizontal<CR>]], { silent = true })
+set("t", "<A-v>", [[<C-\><C-n><cmd>ToggleTerm direction=vertical<CR>]], { silent = true })
+set("n", "<A-f>", "<cmd>ToggleTerm direction=float<CR>", { silent = true })
+set("n", "<A-h>", "<cmd>ToggleTerm direction=horizontal<CR>", { silent = true })
+set("n", "<A-v>", "<cmd>ToggleTerm direction=vertical size=40<CR>", { silent = true })
+
 -- ── Diagnostics ──────────────────────────────────────────────────
 local diagnostic_goto = function(next, severity)
 	return function()
