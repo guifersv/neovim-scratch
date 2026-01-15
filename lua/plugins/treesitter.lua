@@ -21,6 +21,10 @@ return {
 			"xml",
 			"yaml",
 			"rust",
+			"go",
+			"gomod",
+			"gosum",
+			"gowork",
 		}
 
 		vim.api.nvim_create_autocmd("FileType", {
