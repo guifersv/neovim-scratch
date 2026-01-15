@@ -71,7 +71,7 @@ set({ "n", "x", "o" }, "ge", "<cmd>lua require('spider').motion('ge')<cr>", { de
 
 -- ── ToggleTerm ──────────────────────────
 set("t", "<A-f>", [[<C-\><C-n><cmd>ToggleTerm direction=float<CR>]], { silent = true })
-set("t", "<A-h>", [[<C-\><C-n><cmd>ToggleTerm direction=horizontal<CR>]], { silent = true })
+set("t", "<A-s>", [[<C-\><C-n><cmd>ToggleTerm direction=horizontal<CR>]], { silent = true })
 set("t", "<A-v>", [[<C-\><C-n><cmd>ToggleTerm direction=vertical<CR>]], { silent = true })
 set("n", "<A-f>", "<cmd>ToggleTerm direction=float<CR>", { silent = true })
 set("n", "<A-h>", "<cmd>ToggleTerm direction=horizontal<CR>", { silent = true })
