@@ -7,13 +7,14 @@ return {
 
 			spec = {
 				{ "<leader><tab>", group = "Tab", mode = "n" },
-				{ "<leader>a", group = "Rust/Cargo", mode = "n" },
+				{ "<leader>r", group = "Rust/Cargo", mode = "n" },
 				{ "<leader>m", group = "Dotnet", mode = "n" },
 				{ "<leader>l", group = "Code", mode = "n" },
 				{ "<leader>g", group = "Git", mode = "n" },
 				{ "<leader>c", group = "Trouble", mode = "n" },
 				{ "<leader>b", group = "Buffer", mode = "n" },
 				{ "<leader>f", group = "Telescope", mode = "n" },
+				{ "<leader>a", group = "Golang", mode = "n" },
 			},
 		},
 	},

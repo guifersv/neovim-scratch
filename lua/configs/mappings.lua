@@ -98,21 +98,32 @@ set("n", "[w", diagnostic_goto(false, "WARN"), { desc = "Prev Warning" })
 
 -- ── Language Specific (Rust/Cargo & .NET) ────────────────────────
 -- Rust
-set("n", "<leader>ar", "<cmd>Crun<CR>", { desc = "Cargo run" })
-set("n", "<leader>ab", "<cmd>Cbuild<CR>", { desc = "Cargo build" })
-set("n", "<leader>at", "<cmd>Ctest<CR>", { desc = "Cargo test" })
+set("n", "<leader>rr", "<cmd>Crun<CR>", { desc = "Cargo run" })
+set("n", "<leader>rb", "<cmd>Cbuild<CR>", { desc = "Cargo build" })
+set("n", "<leader>rt", "<cmd>Ctest<CR>", { desc = "Cargo test" })
 
-set("n", "<leader>aa", function()
+set("n", "<leader>ra", function()
 	vim.cmd.RustLsp("codeAction") -- supports rust-analyzer's grouping
 	-- or vim.lsp.buf.codeAction() if you don't want grouping.
 end, { desc = "Cargo code actions" })
-set("n", "<leader>ak", function()
+set("n", "<leader>rk", function()
 	vim.cmd.RustLsp({ "hover", "actions" })
 end, { desc = "Cargo hover" })
 
--- .NET
-set("n", "<leader>mr", "<cmd>Dotnet run<CR>", { desc = "Dotnet run" })
-set("n", "<leader>mw", "<cmd>Dotnet watch<CR>", { desc = "Dotnet watch" })
-set("n", "<leader>mt", "<cmd>Dotnet test<CR>", { desc = "Dotnet test" })
-set("n", "<leader>mb", "<cmd>Dotnet build<CR>", { desc = "Dotnet build" })
-set("n", "<leader>mv", "<cmd>Dotnet project view<CR>", { desc = "Dotnet project view" })
+-- Golang
+set("n", "<leader>am", "<cmd>GoMake<CR>", { desc = "Go: async make" })
+set("n", "<leader>ab", "<cmd>GoBuild<CR>", { desc = "Go: build" })
+set("n", "<leader>aB", "<cmd>GoBuild -g %<CR>", { desc = "Go: build (debug current file)" })
+set("n", "<leader>ar", "<cmd>GoRun<CR>", { desc = "Go: run ." })
+set("n", "<leader>aR", "<cmd>GoRun %:h<CR>", { desc = "Go: run current package" })
+set("n", "<leader>af", "<cmd>GoRun -F<CR>", { desc = "Go: run in floaterm" })
+set("n", "<leader>as", "<cmd>GoStop<CR>", { desc = "Go: stop running job" })
+set("n", "<leader>ag", "<cmd>GoGenerate<CR>", { desc = "Go: generate" })
+
+set("n", "<leader>at", "<cmd>GoTest<CR>", { desc = "Go: test ./..." })
+set("n", "<leader>aT", "<cmd>GoTest -v %<CR>", { desc = "Go: test current file (verbose)" })
+set("n", "<leader>an", "<cmd>GoTest -n<CR>", { desc = "Go: test nearest" })
+set("n", "<leader>aF", "<cmd>GoTest -f<CR>", { desc = "Go: test current file" })
+set("n", "<leader>ap", "<cmd>GoTest -p<CR>", { desc = "Go: test current package" })
+
+set("n", "<leader>aq", "<cmd>GoTermClose<CR>", { desc = "Go: close terminal" })
