@@ -74,7 +74,7 @@ set("t", "<A-f>", [[<C-\><C-n><cmd>ToggleTerm direction=float<CR>]], { silent = 
 set("t", "<A-s>", [[<C-\><C-n><cmd>ToggleTerm direction=horizontal<CR>]], { silent = true })
 set("t", "<A-v>", [[<C-\><C-n><cmd>ToggleTerm direction=vertical<CR>]], { silent = true })
 set("n", "<A-f>", "<cmd>ToggleTerm direction=float<CR>", { silent = true })
-set("n", "<A-h>", "<cmd>ToggleTerm direction=horizontal<CR>", { silent = true })
+set("n", "<A-s>", "<cmd>ToggleTerm direction=horizontal<CR>", { silent = true })
 set("n", "<A-v>", "<cmd>ToggleTerm direction=vertical size=40<CR>", { silent = true })
 
 -- ── Diagnostics ──────────────────────────────────────────────────
