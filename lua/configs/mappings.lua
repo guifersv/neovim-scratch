@@ -96,7 +96,7 @@ set("n", "[e", diagnostic_goto(false, "ERROR"), { desc = "Prev Error" })
 set("n", "]w", diagnostic_goto(true, "WARN"), { desc = "Next Warning" })
 set("n", "[w", diagnostic_goto(false, "WARN"), { desc = "Prev Warning" })
 
--- ── Language Specific (Rust/Cargo & .NET) ────────────────────────
+-- ── Language Specific (Rust/Cargo & Golang) ────────────────────────
 -- Rust
 set("n", "<leader>rr", "<cmd>Crun<CR>", { desc = "Cargo run" })
 set("n", "<leader>rb", "<cmd>Cbuild<CR>", { desc = "Cargo build" })
@@ -127,3 +127,6 @@ set("n", "<leader>aF", "<cmd>GoTest -f<CR>", { desc = "Go: test current file" })
 set("n", "<leader>ap", "<cmd>GoTest -p<CR>", { desc = "Go: test current package" })
 
 set("n", "<leader>aq", "<cmd>GoTermClose<CR>", { desc = "Go: close terminal" })
+
+-- ── Utilities ────────────────────────
+set("n", "<leader>se", "oif err != nil {<CR>}<ESC>Oreturn err <ESC>", { desc = "Go: err boilerplate" })

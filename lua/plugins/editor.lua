@@ -14,6 +14,7 @@ return {
 				{ "<leader>b", group = "Buffer", mode = "n" },
 				{ "<leader>f", group = "Telescope", mode = "n" },
 				{ "<leader>a", group = "Golang", mode = "n" },
+				{ "<leader>s", group = "Utils", mode = "n" },
 			},
 		},
 	},
