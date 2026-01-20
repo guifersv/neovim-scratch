@@ -29,7 +29,7 @@ return {
 			rust = { "rustfmt" },
 			lua = { "stylua" },
 			toml = { "taplo" },
-			go = { "goimports", lsp_format = "last" },
+			go = { "gofumpt" },
 		},
 	},
 }

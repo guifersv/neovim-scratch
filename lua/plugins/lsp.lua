@@ -122,7 +122,6 @@ return {
 			"gotests",
 			"iferr",
 			"impl",
-			"goimports",
 		})
 
 		require("mason-tool-installer").setup({
