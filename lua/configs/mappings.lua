@@ -130,3 +130,4 @@ set("n", "<leader>aq", "<cmd>GoTermClose<CR>", { desc = "Go: close terminal" })
 
 -- ── Utilities ────────────────────────
 set("n", "<leader>se", "oif err != nil {<CR>}<ESC>Oreturn err <ESC>", { desc = "Go: err boilerplate" })
+set("n", "<leader>st", "ofunc TestName(t *testing.T) {<CR>}<ESC><ESC>", { desc = "Go: test template" })
