@@ -111,33 +111,22 @@ set("n", "<leader>rk", function()
 end, { desc = "Cargo hover" })
 
 -- Golang
-set("n", "<leader>am", "<cmd>GoMake<CR>", { desc = "Go: async make" })
-set("n", "<leader>ab", "<cmd>GoBuild<CR>", { desc = "Go: build" })
-set("n", "<leader>aB", "<cmd>GoBuild -g %<CR>", { desc = "Go: build (debug current file)" })
-set("n", "<leader>ar", "<cmd>GoRun<CR>", { desc = "Go: run ." })
-set("n", "<leader>aR", "<cmd>GoRun %:h<CR>", { desc = "Go: run current package" })
-set("n", "<leader>af", "<cmd>GoRun -F<CR>", { desc = "Go: run in floaterm" })
-set("n", "<leader>as", "<cmd>GoStop<CR>", { desc = "Go: stop running job" })
-set("n", "<leader>ag", "<cmd>GoGenerate<CR>", { desc = "Go: generate" })
-
-set("n", "<leader>at", "<cmd>GoTest<CR>", { desc = "Go: test ./..." })
-set("n", "<leader>aT", "<cmd>GoTest -v %<CR>", { desc = "Go: test current file (verbose)" })
-set("n", "<leader>an", "<cmd>GoTest -n<CR>", { desc = "Go: test nearest" })
-set("n", "<leader>aF", "<cmd>GoTest -f<CR>", { desc = "Go: test current file" })
-set("n", "<leader>ap", "<cmd>GoTest -p<CR>", { desc = "Go: test current package" })
-
-set("n", "<leader>aq", "<cmd>GoTermClose<CR>", { desc = "Go: close terminal" })
-
--- ── Utilities ────────────────────────
-set("n", "<leader>se", "oif err != nil {<CR>}<ESC>Oreturn err <ESC>", { desc = "Go: err boilerplate" })
-set("n", "<leader>st", "ofunc TestName(t *testing.T) {<CR>}<ESC><ESC>", { desc = "Go: test template" })
+set("n", "<leader>am", "<cmd>GoMake<CR>", { desc = "async make" })
+set("n", "<leader>ab", "<cmd>GoBuild<CR>", { desc = "build" })
+set("n", "<leader>ar", "<cmd>GoRun<CR>", { desc = "run ." })
+set("n", "<leader>as", "<cmd>GoStop<CR>", { desc = "stop running job" })
+set("n", "<leader>ag", "<cmd>GoGenerate<CR>", { desc = "generate" })
+set("n", "<leader>at", "<cmd>GoTest<CR>", { desc = "test ./..." })
+set("n", "<leader>aT", "<cmd>GoTest -f<CR>", { desc = "test current file" })
+set("n", "<leader>ae", "<cmd>GoIfErr<CR>", { desc = "add if err" })
+-- TODO: GoImpl
 
 -- ── LSP ────────────────────────
 set("n", "gd", "<cmd>Telescope lsp_definitions<cr>", { desc = "LSP: Goto Definition" })
 set("n", "gr", "<cmd>Telescope lsp_references<cr>", { desc = "LSP: Goto References" })
 set("n", "gI", "<cmd>Telescope lsp_implementations<cr>", { desc = "LSP: Goto Implementation" })
 set("n", "gT", "<cmd>Telescope lsp_type_definitions<cr>", { desc = "LSP: Goto Type Definition" })
-set("n", "K", vim.lsp.buf.hover, { desc = "LSP: Hover" })
+-- set("n", "K", vim.lsp.buf.hover, { desc = "LSP: Hover" })
 set("n", "<leader>lr", vim.lsp.buf.rename, { desc = "LSP: Rename" })
 set({ "n", "x" }, "<leader>la", vim.lsp.buf.code_action, { desc = "LSP: Code Action" })
 set("n", "<leader>lh", function()
