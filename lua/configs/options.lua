@@ -59,8 +59,6 @@ opt.winminwidth = 5
 opt.wrap = false
 
 -- Globals & Providers
-g.mapleader = " "
-g.maplocalleader = "\\"
 g.markdown_recommended_style = 0
 g.loaded_node_provider = 0
 g.loaded_python3_provider = 0

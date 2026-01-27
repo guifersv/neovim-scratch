@@ -131,3 +131,15 @@ set("n", "<leader>aq", "<cmd>GoTermClose<CR>", { desc = "Go: close terminal" })
 -- ── Utilities ────────────────────────
 set("n", "<leader>se", "oif err != nil {<CR>}<ESC>Oreturn err <ESC>", { desc = "Go: err boilerplate" })
 set("n", "<leader>st", "ofunc TestName(t *testing.T) {<CR>}<ESC><ESC>", { desc = "Go: test template" })
+
+-- ── LSP ────────────────────────
+set("n", "gd", "<cmd>Telescope lsp_definitions<cr>", { desc = "LSP: Goto Definition" })
+set("n", "gr", "<cmd>Telescope lsp_references<cr>", { desc = "LSP: Goto References" })
+set("n", "gI", "<cmd>Telescope lsp_implementations<cr>", { desc = "LSP: Goto Implementation" })
+set("n", "gT", "<cmd>Telescope lsp_type_definitions<cr>", { desc = "LSP: Goto Type Definition" })
+set("n", "K", vim.lsp.buf.hover, { desc = "LSP: Hover" })
+set("n", "<leader>lr", vim.lsp.buf.rename, { desc = "LSP: Rename" })
+set({ "n", "x" }, "<leader>la", vim.lsp.buf.code_action, { desc = "LSP: Code Action" })
+set("n", "<leader>lh", function()
+	vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
+end, { desc = "Toggle Inlay Hints" })
