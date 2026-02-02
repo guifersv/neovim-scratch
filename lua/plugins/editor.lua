@@ -15,6 +15,7 @@ return {
 				{ "<leader>f", group = "Telescope", mode = "n" },
 				{ "<leader>a", group = "Golang", mode = "n" },
 				{ "<leader>s", group = "Utils", mode = "n" },
+				{ "<leader>z", group = "Zig", mode = "n" },
 			},
 		},
 	},
@@ -79,5 +80,11 @@ return {
       { "<leader>cst", "<cmd>TodoTelescope<cr>", desc = "Todo" },
       { "<leader>csT", "<cmd>TodoTelescope keywords=TODO,FIX,FIXME<cr>", desc = "Todo/Fix/Fixme" },
     },
+	},
+	{
+		"danymat/neogen",
+		config = true,
+		-- Uncomment next line if you want to follow only stable versions
+		-- version = "*"
 	},
 }

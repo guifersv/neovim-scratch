@@ -3,16 +3,7 @@ return {
 	config = function()
 		require("mini.ai").setup({ n_lines = 500 })
 		require("mini.move").setup()
-		require("mini.pairs").setup({
-			mappings = {
-				["("] = { action = "open", pair = "()", neigh_pattern = "^[^\\]" },
-				["["] = { action = "open", pair = "[]", neigh_pattern = "^[^\\]" },
-				["{"] = { action = "open", pair = "{}", neigh_pattern = "^[^\\]" },
-
-				['"'] = { action = "open", pair = '""', neigh_pattern = "^[^\\]", register = { cr = false } },
-				["'"] = { action = "open", pair = "''", neigh_pattern = "^[^%a\\]", register = { cr = false } },
-			},
-		})
+		-- require("mini.pairs").setup()
 		require("mini.bufremove").setup()
 		require("mini.splitjoin").setup({
 			mappings = {

@@ -119,7 +119,11 @@ set("n", "<leader>ag", "<cmd>GoGenerate<CR>", { desc = "generate" })
 set("n", "<leader>at", "<cmd>GoTest<CR>", { desc = "test ./..." })
 set("n", "<leader>aT", "<cmd>GoTest -f<CR>", { desc = "test current file" })
 set("n", "<leader>ae", "<cmd>GoIfErr<CR>", { desc = "add if err" })
--- TODO: GoImpl
+
+-- Zig
+set("n", "<leader>zr", "<cmd>TermExec direction=horizontal cmd='zig run %'<CR>", { desc = "run current file" })
+set("n", "<leader>zb", "<cmd>TermExec direction=horizontal cmd='zig build'<CR>", { desc = "build project" })
+set("n", "<leader>zR", "<cmd>TermExec direction=horizontal cmd='zig build run'<CR>", { desc = "build and run project" })
 
 -- ── LSP ────────────────────────
 set("n", "gd", "<cmd>Telescope lsp_definitions<cr>", { desc = "LSP: Goto Definition" })
@@ -132,3 +136,6 @@ set({ "n", "x" }, "<leader>la", vim.lsp.buf.code_action, { desc = "LSP: Code Act
 set("n", "<leader>lh", function()
 	vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
 end, { desc = "Toggle Inlay Hints" })
+set("n", "<leader>lc", function()
+	require("neogen").generate()
+end, { desc = "Neogen" })

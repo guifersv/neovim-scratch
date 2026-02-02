@@ -13,6 +13,7 @@ return {
     require("mason-tool-installer").setup({
       ensure_installed = {
         "rust_analyzer",
+        "zls",
         "taplo",
         "lua_ls",
         "gopls",
