@@ -4,6 +4,7 @@ return {
 	build = ":TSUpdate",
 	config = function()
 		local parsers = {
+      -- "java",
 			"bash",
 			"c",
 			"diff",
@@ -25,6 +26,7 @@ return {
 			"gomod",
 			"gosum",
 			"gowork",
+      "zig",
 		}
 
 		vim.api.nvim_create_autocmd("FileType", {

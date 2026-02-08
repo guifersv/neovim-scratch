@@ -30,6 +30,7 @@ return {
 			lua = { "stylua" },
 			toml = { "taplo" },
 			go = { "gofumpt" },
+      -- java = { "google-java-format" },
 		},
 	},
 }
