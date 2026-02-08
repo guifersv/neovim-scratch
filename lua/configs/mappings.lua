@@ -125,6 +125,7 @@ set("n", "<leader>zr", "<cmd>TermExec direction=horizontal cmd='zig run %'<CR>",
 set("n", "<leader>zb", "<cmd>TermExec direction=horizontal cmd='zig build'<CR>", { desc = "build project" })
 set("n", "<leader>zR", "<cmd>TermExec direction=horizontal cmd='zig build run'<CR>", { desc = "build and run project" })
 set("n", "<leader>zt", "<cmd>TermExec direction=horizontal cmd='zig test %'<CR>", { desc = "test current file" })
+set("n", "<leader>zv", "ovar f: usize = 0;<CR>_ = &f;<ESC>", { desc = "runtime var boilerplate" })
 
 -- ── LSP ────────────────────────
 set("n", "gd", "<cmd>Telescope lsp_definitions<cr>", { desc = "LSP: Goto Definition" })
