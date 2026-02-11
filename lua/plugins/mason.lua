@@ -1,5 +1,5 @@
 return {
-  "mason-org/mason.nvim",
+	"mason-org/mason.nvim",
 	dependencies = {
 		"mason-org/mason-lspconfig.nvim",
 		"neovim/nvim-lspconfig",
@@ -7,32 +7,17 @@ return {
 		"saghen/blink.cmp",
 		"nvim-telescope/telescope.nvim",
 	},
-  config = function()
-    require("mason").setup()
+	config = function()
+		require("mason").setup()
 
-    require("mason-tool-installer").setup({
-      ensure_installed = {
-        "rust_analyzer",
-        "zls",
-        "taplo",
-        "lua_ls",
-        "gopls",
-        "stylua",
-        "gofumpt",
-        "gomodifytags",
-        "gotests",
-        "iferr",
-        "impl",
-      },
-    })
+		require("mason-tool-installer").setup({
+			ensure_installed = {
+				"zls",
+				"lua_ls",
+				"stylua",
+			},
+		})
 
-    require("mason-lspconfig").setup({
-      automatic_enable = {
-        exclude = {
-          "rust_analyzer",
-        },
-      },
-    })
-  end,
+		require("mason-lspconfig").setup()
+	end,
 }
-

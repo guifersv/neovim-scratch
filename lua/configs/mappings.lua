@@ -96,30 +96,6 @@ set("n", "[e", diagnostic_goto(false, "ERROR"), { desc = "Prev Error" })
 set("n", "]w", diagnostic_goto(true, "WARN"), { desc = "Next Warning" })
 set("n", "[w", diagnostic_goto(false, "WARN"), { desc = "Prev Warning" })
 
--- ── Language Specific (Rust/Cargo & Golang) ────────────────────────
--- Rust
-set("n", "<leader>rr", "<cmd>Crun<CR>", { desc = "Cargo run" })
-set("n", "<leader>rb", "<cmd>Cbuild<CR>", { desc = "Cargo build" })
-set("n", "<leader>rt", "<cmd>Ctest<CR>", { desc = "Cargo test" })
-
-set("n", "<leader>ra", function()
-	vim.cmd.RustLsp("codeAction") -- supports rust-analyzer's grouping
-	-- or vim.lsp.buf.codeAction() if you don't want grouping.
-end, { desc = "Cargo code actions" })
-set("n", "<leader>rk", function()
-	vim.cmd.RustLsp({ "hover", "actions" })
-end, { desc = "Cargo hover" })
-
--- Golang
-set("n", "<leader>am", "<cmd>GoMake<CR>", { desc = "async make" })
-set("n", "<leader>ab", "<cmd>GoBuild<CR>", { desc = "build" })
-set("n", "<leader>ar", "<cmd>GoRun<CR>", { desc = "run ." })
-set("n", "<leader>as", "<cmd>GoStop<CR>", { desc = "stop running job" })
-set("n", "<leader>ag", "<cmd>GoGenerate<CR>", { desc = "generate" })
-set("n", "<leader>at", "<cmd>GoTest<CR>", { desc = "test ./..." })
-set("n", "<leader>aT", "<cmd>GoTest -f<CR>", { desc = "test current file" })
-set("n", "<leader>ae", "<cmd>GoIfErr<CR>", { desc = "add if err" })
-
 -- Zig
 set("n", "<leader>zr", "<cmd>TermExec direction=horizontal cmd='zig run %'<CR>", { desc = "run current file" })
 set("n", "<leader>zb", "<cmd>TermExec direction=horizontal cmd='zig build'<CR>", { desc = "build project" })

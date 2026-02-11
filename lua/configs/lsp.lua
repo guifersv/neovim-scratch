@@ -1,15 +1,3 @@
-vim.lsp.config("gopls", {
-	settings = {
-		["gopls"] = {
-			hints = {
-				enabled = true,
-				assignVariableTypes = true,
-				parameterNames = true,
-			},
-		},
-	},
-})
-
 vim.lsp.config("lua_ls", {
 	settings = {
 		["Lua"] = {

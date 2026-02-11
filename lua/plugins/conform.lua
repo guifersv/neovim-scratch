@@ -26,11 +26,8 @@ return {
 		-- 	end
 		-- end,
 		formatters_by_ft = {
-			rust = { "rustfmt" },
 			lua = { "stylua" },
-			toml = { "taplo" },
-			go = { "gofumpt" },
-      -- java = { "google-java-format" },
+			-- java = { "google-java-format" },
 		},
 	},
 }

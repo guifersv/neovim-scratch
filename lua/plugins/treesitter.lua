@@ -21,11 +21,6 @@ return {
 			"vimdoc",
 			"xml",
 			"yaml",
-			"rust",
-			"go",
-			"gomod",
-			"gosum",
-			"gowork",
       "zig",
 		}
 
