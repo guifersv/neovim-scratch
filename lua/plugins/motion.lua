@@ -7,15 +7,6 @@ return {
 	{
 		"chrisgrieser/nvim-spider",
 		lazy = true,
-		dependencies = {
-			{
-				"vhyrro/luarocks.nvim",
-				priority = 1000,
-				opts = {
-					rocks = { "luautf8" },
-				},
-			},
-		},
 		opts = {},
 	},
 }
