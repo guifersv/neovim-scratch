@@ -98,9 +98,10 @@ set("n", "[w", diagnostic_goto(false, "WARN"), { desc = "Prev Warning" })
 
 -- Zig
 set("n", "<leader>zr", "<cmd>TermExec direction=horizontal cmd='zig run %'<CR>", { desc = "run current file" })
+set("n", "<leader>zt", "<cmd>TermExec direction=horizontal cmd='zig test %'<CR>", { desc = "test current file" })
 set("n", "<leader>zb", "<cmd>TermExec direction=horizontal cmd='zig build'<CR>", { desc = "build project" })
 set("n", "<leader>zR", "<cmd>TermExec direction=horizontal cmd='zig build run'<CR>", { desc = "build and run project" })
-set("n", "<leader>zt", "<cmd>TermExec direction=horizontal cmd='zig test %'<CR>", { desc = "test current file" })
+set("n", "<leader>zT", "<cmd>TermExec direction=horizontal cmd='zig build test'<CR>", { desc = "build and test project" })
 set("n", "<leader>zv", "ovar f: usize = 0;<CR>_ = &f;<ESC>", { desc = "runtime var" })
 set(
 	"n",
